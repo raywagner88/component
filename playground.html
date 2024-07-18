@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./my-component-library.umd.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('my-button');
+        const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'gray', 'indigo', 'teal', 'orange'];
+
+        button.addEventListener('click', () => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          button.setAttribute('color', randomColor);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <my-button label="Click Me" color="purple"></my-button>
+  </body>
+</html>
